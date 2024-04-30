@@ -4,7 +4,11 @@
   export let isActive: boolean;
 </script>
 
-{#if isFilled}
+{#if className.includes(`idea`)}
+  <div class="dot idea">💡</div>
+{:else if className.includes(`thought`)}
+  <div class="dot thought">🤔</div>
+{:else if isFilled}
   <svg
     class="{`dot filled ${className}`}"
     class:active="{isActive}"

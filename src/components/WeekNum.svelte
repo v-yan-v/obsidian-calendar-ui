@@ -51,10 +51,6 @@
 </td>
 
 <style>
-  td {
-    border-right: 1px solid var(--background-modifier-border);
-  }
-
   .week-num {
     background-color: var(--color-background-weeknum);
     border-radius: 4px;

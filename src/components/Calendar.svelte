@@ -81,7 +81,7 @@
       {/each}
     </colgroup>
     <thead>
-      <tr>
+      <tr class="week-row">
         {#if showWeekNums}
           <th>W</th>
         {/if}
@@ -92,7 +92,7 @@
     </thead>
     <tbody>
       {#each month as week (week.weekNum)}
-        <tr class="week-cell">
+        <tr class="week-row">
           {#if showWeekNums}
             <WeekNum
               {...week}
@@ -174,8 +174,12 @@
 
 {#if showWeekNums}
   <style>
-    tr.week-cell {
-			grid-template-columns: auto repeat(7, 1fr);
+    tr.week-row {
+			grid-template-columns: 2.5ch repeat(7, 1fr);
+		}
+
+    tr.week-row > :first-child {
+			border-right: 1px solid var(--background-modifier-border);
 		}
   </style>
 {/if}

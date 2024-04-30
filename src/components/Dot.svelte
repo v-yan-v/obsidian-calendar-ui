@@ -30,9 +30,8 @@
   .dot,
   .hollow {
     display: inline-block;
-    height: 6px;
-    width: 6px;
-    margin: 0 1px;
+    height: var(--dot-height);
+    width: var(--dot-width);
   }
 
   .filled {

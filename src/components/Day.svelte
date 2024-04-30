@@ -77,6 +77,7 @@
 
   .today {
     color: var(--color-text-today);
+		font-weight: bold;
   }
 
   .day:active,
@@ -87,10 +88,20 @@
   }
 
   .dot-container {
+    --dot-height: var(--dot-width);
+    --dot-width: 6px;
+    --padding-width: 0px; /* redundant pixels for calc()*/
+    --gap-width: 2px;
+
     display: flex;
+		font-size: var(--dot-width);
     flex-wrap: wrap;
+    gap: var(--gap-width);
     justify-content: center;
-    line-height: 6px;
-    min-height: 6px;
+    line-height: var(--dot-width);
+		margin: 0 auto;
+    min-height: var(--dot-height);
+		padding-inline: var(--padding-width);
+		max-width: calc(4 * var(--dot-width) + 3 * var(--gap-width) + 2 * var(--padding-width) ); /* max 4 dots per row */
   }
 </style>

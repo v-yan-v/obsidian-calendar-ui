@@ -92,7 +92,7 @@
     </thead>
     <tbody>
       {#each month as week (week.weekNum)}
-        <tr>
+        <tr class="week-cell">
           {#if showWeekNums}
             <WeekNum
               {...week}
@@ -147,10 +147,6 @@
     padding: 0;
   }
 
-  th {
-    text-align: center;
-  }
-
   .weekend {
     background-color: var(--color-background-weekend);
   }
@@ -160,12 +156,26 @@
     width: 100%;
   }
 
+  tr {
+    display: grid;
+		grid-template-columns: repeat(7, 1fr);
+	}
+
   th {
     background-color: var(--color-background-heading);
     color: var(--color-text-heading);
     font-size: 0.6em;
     letter-spacing: 1px;
     padding: 4px;
+		text-align: center;
     text-transform: uppercase;
   }
 </style>
+
+{#if showWeekNums}
+  <style>
+    tr.week-cell {
+			grid-template-columns: auto repeat(7, 1fr);
+		}
+  </style>
+{/if}

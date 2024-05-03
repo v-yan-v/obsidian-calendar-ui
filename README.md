@@ -1,3 +1,10 @@
+Fork adds additional marks to the daily notes in the calendar view
+- 💡 - for notes containing the tag specified in the settings (indicating the idea)
+- 🤔 - for notes that have content in a section (heading) specified in the settings
+
+---
+
+
 # `obsidian-calendar-ui`
 
 The UI package that powers the [Obsidian Calendar plugin](https://github.com/liamcain/obsidian-calendar-plugin).
